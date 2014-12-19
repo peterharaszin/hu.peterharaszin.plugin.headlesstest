@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="TestHeadlessExtensionId"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="hu.peterharaszin.plugin.headlesstest.TestHeadlessApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="hu.peterharaszin.plugin.headlesstest.TestHeadlessExtensionId"
+            name="TestHeadlessProduct">
+         <property
+               name="appName"
+               value="TestHeadlessProduct">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="testheadlessproductid"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="hu.peterharaszin.plugin.headlesstest.TestHeadlessExtensionId"
+            name="TestHeadlessProduct">
+         <property
+               name="appName"
+               value="TestHeadlessProduct">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
